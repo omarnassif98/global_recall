@@ -4,9 +4,10 @@ const protocol_lookup = {
     'player_leave': player_hot_release,
     'lobby_intro': fill_lobby,
     'player_ready': player_ready_toggle,
+    'consensus':prepare_game,
+    'game_state': game_state_change,
     'guess_result': guess_result,
-    'lobby_intro':fill_lobby,
-    'player_score':update_score
+    'player_score':update_player_score
 };
 
 function connect_to_server(){
