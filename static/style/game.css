@@ -1,0 +1,75 @@
+html, body{
+    height: 100%;
+    margin: 0;
+}
+#welcome_prompt{
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    border-radius: 1em;
+    margin: auto;
+    background-color: darkgray;
+}
+
+#backdrop{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.255);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+#game_area{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: [nav] 4em [row_main] auto [input] 6em;
+    grid-template-columns: [sidebar] 12em [col_main] auto;
+}
+
+#lobby_info{
+    background-color: aqua;
+    grid-area: row_main / sidebar;
+}
+
+#guesses{
+    background-color: beige;
+    grid-area: row_main / col_main;
+}
+#input{
+    display: flex;
+    justify-content: center;
+    background-color: aquamarine;
+    grid-area: input / sidebar / input / -1;
+}
+#navbar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: blanchedalmond;
+    grid-area: nav / sidebar / nav / -1;
+}
+
+#game_status_text{
+    margin: auto;
+}
+
+input[type=text]{
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid;
+    margin: 2em;
+    outline: none;
+    width: 10em;
+    transition: all 0.4s;
+}
+
+input[type=text]:focus{
+    background-color: darkgrey;
+    width: 12em;
+}
+

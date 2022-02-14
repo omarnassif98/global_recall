@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style/game.css">
+    <script src="/scripts/helper.js"></script>
+    <script src="/scripts/room_manager.js"></script>
+    <script src="/scripts/socket_manager.js"></script>
+    <script src="/scripts/game_manager.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="game_area">
+        <div id="navbar">
+            <span id="game_status_text">Not in game yet</span>
+        </div>
+        <div id="lobby_info">
+            <ul id="lobby_members_list">
+
+            </ul>
+
+        </div>
+        <div id="guesses">
+            <div class="country_guess_list_wrapper" id="default_list">
+                <input type="text" class="invisible_input" value="Unorganized">
+                <hr>
+                <ul>
+                    
+                </ul>
+            </div>
+
+            <button>Add a list</button>
+        </div>
+        <div id="input">
+            <div id="pre_game">
+                <h1>Ready to begin?</h1>
+                <input type="checkbox" onclick="toggle_ready(this.checked)">
+            </div>
+            <div id="main_game" style="display: none;">
+                <input type="text" id="country_guess_input" placeholder="Let's get to typing">
+                <button onclick="make_guess()" style="margin: 2em; width: 6em;">Submit</button>
+            </div>
+
+        </div>
+
+    </div>
+    <div id='backdrop'>
+        <div id="welcome_prompt">
+            <h2>Welcome to Global Recall</h2>
+            <h3>Let's see how many countries you can recall</h3>
+            <div style="margin: 0.5em;">
+                <label for="player_name">Name: </label>
+                <input type="text" name="player_name" id="player_name_input">
+                <button onclick="connect_to_server()">Let's do this head to head</button>
+            </div>
+            <button onclick="dismiss_popup()">I'll practice alone</button>
+        </div>
+    </div>
+</body>
+</html>

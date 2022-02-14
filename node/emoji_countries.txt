@@ -1,0 +1,261 @@
+🇦🇨-Ascension Island-0
+🇦🇩-Andorra-1
+🇦🇪-United Arab Emirates-2
+🇦🇫-Afghanistan-3
+🇦🇬-Antigua & Barbuda-4
+🇦🇮-Anguilla-5
+🇦🇱-Albania-6
+🇦🇲-Armenia-7
+🇦🇴-Angola-8
+🇦🇶-Antarctica-9
+🇦🇷-Argentina-10
+🇦🇸-American Samoa-11
+🇦🇹-Austria-12
+🇦🇺-Australia-13
+🇦🇼-Aruba-14
+🇦🇽-Åland Islands-15
+🇦🇿-Azerbaijan-16
+🇧🇦-Bosnia & Herzegovina-17
+🇧🇧-Barbados-18
+🇧🇩-Bangladesh-19
+🇧🇪-Belgium-20
+🇧🇫-Burkina Faso-21
+🇧🇬-Bulgaria-22
+🇧🇭-Bahrain-23
+🇧🇮-Burundi-24
+🇧🇯-Benin-25
+🇧🇱-St. Barthélemy-26
+🇧🇲-Bermuda-27
+🇧🇳-Brunei-28
+🇧🇴-Bolivia-29
+🇧🇶-Caribbean Netherlands-30
+🇧🇷-Brazil-31
+🇧🇸-Bahamas-32
+🇧🇹-Bhutan-33
+🇧🇻-Bouvet Island-34
+🇧🇼-Botswana-35
+🇧🇾-Belarus-36
+🇧🇿-Belize-37
+🇨🇦-Canada-38
+🇨🇨-Cocos (Keeling) Islands-39
+🇨🇩-Congo — Kinshasa-40
+🇨🇫-Central African Republic-41
+🇨🇬-Congo — Brazzaville-42
+🇨🇭-Switzerland-43
+🇨🇮-Côte d’Ivoire-44
+🇨🇰-Cook Islands-45
+🇨🇱-Chile-46
+🇨🇲-Cameroon-47
+🇨🇳-China-48
+🇨🇴-Colombia-49
+🇨🇵-Clipperton Island-50
+🇨🇷-Costa Rica-51
+🇨🇺-Cuba-52
+🇨🇻-Cape Verde-53
+🇨🇼-Curaçao-54
+🇨🇽-Christmas Island-55
+🇨🇾-Cyprus-56
+🇨🇿-Czechia-57
+🇩🇪-Germany-58
+🇩🇬-Diego Garcia-59
+🇩🇯-Djibouti-60
+🇩🇰-Denmark-61
+🇩🇲-Dominica-62
+🇩🇴-Dominican Republic-63
+🇩🇿-Algeria-64
+🇪🇦-Ceuta & Melilla-65
+🇪🇨-Ecuador-66
+🇪🇪-Estonia-67
+🇪🇬-Egypt-68
+🇪🇭-Western Sahara-69
+🇪🇷-Eritrea-70
+🇪🇸-Spain-71
+🇪🇹-Ethiopia-72
+🇪🇺-European Union-73
+🇫🇮-Finland-74
+🇫🇯-Fiji-75
+🇫🇰-Falkland Islands-76
+🇫🇲-Micronesia-77
+🇫🇴-Faroe Islands-78
+🇫🇷-France-79
+🇬🇦-Gabon-80
+🇬🇧-United Kingdom-81
+🇬🇩-Grenada-82
+🇬🇪-Georgia-83
+🇬🇫-French Guiana-84
+🇬🇬-Guernsey-85
+🇬🇭-Ghana-86
+🇬🇮-Gibraltar-87
+🇬🇱-Greenland-88
+🇬🇲-Gambia-89
+🇬🇳-Guinea-90
+🇬🇵-Guadeloupe-91
+🇬🇶-Equatorial Guinea-92
+🇬🇷-Greece-93
+🇬🇸-South Georgia & South Sandwich Islands-94
+🇬🇹-Guatemala-95
+🇬🇺-Guam-96
+🇬🇼-Guinea-Bissau-97
+🇬🇾-Guyana-98
+🇭🇰-Hong Kong SAR China-99
+🇭🇲-Heard & McDonald Islands-100
+🇭🇳-Honduras-101
+🇭🇷-Croatia-102
+🇭🇹-Haiti-103
+🇭🇺-Hungary-104
+🇮🇨-Canary Islands-105
+🇮🇩-Indonesia-106
+🇮🇪-Ireland-107
+🇮🇱-Israel-108
+🇮🇲-Isle of Man-109
+🇮🇳-India-110
+🇮🇴-British Indian Ocean Territory-111
+🇮🇶-Iraq-112
+🇮🇷-Iran-113
+🇮🇸-Iceland-114
+🇮🇹-Italy-115
+🇯🇪-Jersey-116
+🇯🇲-Jamaica-117
+🇯🇴-Jordan-118
+🇯🇵-Japan-119
+🇰🇪-Kenya-120
+🇰🇬-Kyrgyzstan-121
+🇰🇭-Cambodia-122
+🇰🇮-Kiribati-123
+🇰🇲-Comoros-124
+🇰🇳-St. Kitts & Nevis-125
+🇰🇵-North Korea-126
+🇰🇷-South Korea-127
+🇰🇼-Kuwait-128
+🇰🇾-Cayman Islands-129
+🇰🇿-Kazakhstan-130
+🇱🇦-Laos-131
+🇱🇧-Lebanon-132
+🇱🇨-St. Lucia-133
+🇱🇮-Liechtenstein-134
+🇱🇰-Sri Lanka-135
+🇱🇷-Liberia-136
+🇱🇸-Lesotho-137
+🇱🇹-Lithuania-138
+🇱🇺-Luxembourg-139
+🇱🇻-Latvia-140
+🇱🇾-Libya-141
+🇲🇦-Morocco-142
+🇲🇨-Monaco-143
+🇲🇩-Moldova-144
+🇲🇪-Montenegro-145
+🇲🇫-St. Martin-146
+🇲🇬-Madagascar-147
+🇲🇭-Marshall Islands-148
+🇲🇰-North Macedonia-149
+🇲🇱-Mali-150
+🇲🇲-Myanmar-151
+🇲🇳-Mongolia-152
+🇲🇴-Macau-153
+🇲🇵-Mariana Islands-154
+🇲🇶-Martinique-155
+🇲🇷-Mauritania-156
+🇲🇸-Montserrat-157
+🇲🇹-Malta-158
+🇲🇺-Mauritius-159
+🇲🇻-Maldives-160
+🇲🇼-Malawi-161
+🇲🇽-Mexico-162
+🇲🇾-Malaysia-163
+🇲🇿-Mozambique-164
+🇳🇦-Namibia-165
+🇳🇨-New Caledonia-166
+🇳🇪-Niger-167
+🇳🇫-Norfolk Island-168
+🇳🇬-Nigeria-169
+🇳🇮-Nicaragua-170
+🇳🇱-Netherlands-171
+🇳🇴-Norway-172
+🇳🇵-Nepal-173
+🇳🇷-Nauru-174
+🇳🇺-Niue-175
+🇳🇿-New Zealand-176
+🇴🇲-Oman-177
+🇵🇦-Panama-178
+🇵🇪-Peru-179
+🇵🇫-French Polynesia-180
+🇵🇬-Papua New Guinea-181
+🇵🇭-Philippines-182
+🇵🇰-Pakistan-183
+🇵🇱-Poland-184
+🇵🇲-St. Pierre & Miquelon-185
+🇵🇳-Pitcairn Islands-186
+🇵🇷-Puerto Rico-187
+🇵🇸-Palestinian Territories-188
+🇵🇹-Portugal-189
+🇵🇼-Palau-190
+🇵🇾-Paraguay-191
+🇶🇦-Qatar-192
+🇷🇪-Réunion-193
+🇷🇴-Romania-194
+🇷🇸-Serbia-195
+🇷🇺-Russia-196
+🇷🇼-Rwanda-197
+🇸🇦-Saudi Arabia-198
+🇸🇧-Solomon Islands-199
+🇸🇨-Seychelles-200
+🇸🇩-Sudan-201
+🇸🇪-Sweden-202
+🇸🇬-Singapore-203
+🇸🇭-St. Helena-204
+🇸🇮-Slovenia-205
+🇸🇯-Svalbard & Jan Mayen-206
+🇸🇰-Slovakia-207
+🇸🇱-Sierra Leone-208
+🇸🇲-San Marino-209
+🇸🇳-Senegal-210
+🇸🇴-Somalia-211
+🇸🇷-Suriname-212
+🇸🇸-South Sudan-213
+🇸🇹-São Tomé & Príncipe-214
+🇸🇻-El Salvador-215
+🇸🇽-Sint Maarten-216
+🇸🇾-Syria-217
+🇸🇿-Swaziland-218
+🇹🇦-Tristan Da Cunha-219
+🇹🇨-Turks & Caicos Islands-220
+🇹🇩-Chad-221
+🇹🇫-French Southern Territories-222
+🇹🇬-Togo-223
+🇹🇭-Thailand-224
+🇹🇯-Tajikistan-225
+🇹🇰-Tokelau-226
+🇹🇱-Timor-Leste-227
+🇹🇲-Turkmenistan-228
+🇹🇳-Tunisia-229
+🇹🇴-Tonga-230
+🇹🇷-Turkey-231
+🇹🇹-Trinidad & Tobago-232
+🇹🇻-Tuvalu-233
+🇹🇼-Taiwan-234
+🇹🇿-Tanzania-235
+🇺🇦-Ukraine-236
+🇺🇬-Uganda-237
+🇺🇲-U.S. Outlying Islands-238
+🇺🇳-United Nations-239
+🇺🇸-United States-240
+🇺🇾-Uruguay-241
+🇺🇿-Uzbekistan-242
+🇻🇦-Vatican City-243
+🇻🇨-St. Vincent & Grenadines-244
+🇻🇪-Venezuela-245
+🇻🇬-British Virgin Islands-246
+🇻🇮-U.S. Virgin Islands-247
+🇻🇳-Vietnam-248
+🇻🇺-Vanuatu-249
+🇼🇫-Wallis & Futuna-250
+🇼🇸-Samoa-251
+🇽🇰-Kosovo-252
+🇾🇪-Yemen-253
+🇾🇹-Mayotte-254
+🇿🇦-South Africa-255
+🇿🇲-Zambia-256
+🇿🇼-Zimbabwe-257
+🏴󠁧󠁢󠁥󠁮󠁧󠁿-England-258
+🏴󠁧󠁢󠁳󠁣󠁴󠁿-Scotland-259
+🏴󠁧󠁢󠁷󠁬󠁳󠁿-Wales-260

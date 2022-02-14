@@ -1,0 +1,14 @@
+version: "2"
+services:
+  node:
+    build: ./node
+    ports:
+      - "80:80"
+  nginx:
+    image: yannrobert/docker-nginx
+    volumes:
+      - ./nginx-conf:/etc/nginx/conf.d
+      - ./static:/var/www/html
+    network_mode: "service:node"
+    depends_on:
+      - node
