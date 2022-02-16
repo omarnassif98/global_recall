@@ -3,6 +3,7 @@ const protocol_lookup = {
     'player_join': player_hot_join,
     'player_leave': player_hot_release,
     'lobby_intro': fill_lobby,
+    'lobby_state': lobby_context,
     'player_ready': player_ready_toggle,
     'consensus':prepare_game,
     'game_state': game_state_change,
@@ -43,7 +44,6 @@ function connect_to_server(){
     });
 
     function send_message(protocol, message){
-        console.log(`sending ${protocol} message`);
         socket.send(`${protocol}|${message}`)
     }
 

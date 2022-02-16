@@ -32,9 +32,10 @@ wss.on('connection', (ws, req) => {
     })
     ws.on('close', () =>{
         socket_info.delete(ws.id);
-        delete lobby_info[ws.id];
-        console.log('GOODBYE ' + ws.id);
-        broadcast_to_all_users(`player_leave|${ws.id}`)
+        if(ws.id in lobby_info)
+            delete lobby_info[ws.id];
+        broadcast_to_all_users(`player_leave|${ws.id}`);
+        readiness_consensus();
     })
 })
 
@@ -44,8 +45,9 @@ function user_join(client, name){
         color:profile_colors[Math.floor(Math.random() * profile_colors.length)],
         ready:false
     };
-    console.log(`HELLO, ${name} joined`);
+    client.send(`lobby_state|${game_state.state}`);
     broadcast_to_all_users(`player_join|${client.id}_${JSON.stringify(lobby_info[client.id])}`);
+    readiness_consensus();
 }
 
 function user_toggle_ready(client, state){
@@ -64,6 +66,9 @@ function user_toggle_ready(client, state){
 }
 
 function readiness_consensus(){
+    if(game_state.state == 'main_game')
+        return;
+
     if(Object.keys(game_state.player_data).length/Object.keys(lobby_info).length > 0.65 && !game_state.countdown){
         console.log('readiness consensus achieved. starting game in 5 seconds');
         broadcast_to_all_users('consensus|true');
@@ -71,18 +76,29 @@ function readiness_consensus(){
             console.log('Game has begun');
             game_state.state = 'main_game';
             broadcast_to_all_users(`game_state|start_${JSON.stringify(Object.keys(game_state.player_data))}`);
+            setTimeout(() => {
+                end_game();
+            }, 15000);
         }, 5000);
     }else if(Object.keys(game_state.player_data).length/Object.keys(lobby_info).length <= 0.65 && game_state.countdown){
         console.log('readiness consensus broken. cancelling countdown');
         clearTimeout(game_state.countdown);
         game_state.countdown = null;
-        broadcast_to_all_users(`consensus|false_${JSON.stringify(game_state.player_data)}`);
+        broadcast_to_all_users(`consensus|false`);
     }
+}
+
+function end_game(){
+    let snapshot = {}
+    snapshot.guesses = game_state.player_data;
+    snapshot.answers = peek_answers();
+    broadcast_to_all_users(`game_state|end_${JSON.stringify(snapshot)}`);
+    game_state.player_data = {};
+    game_state.state = 'pre_game';
 }
 
 function user_guess(client, country){
     let result = guess_country(country);
-    result.country = country;
     console.log(result);
     if(result == false || game_state.player_data[client.id].includes(result.code)){
         client.send(`guess_result|false`);

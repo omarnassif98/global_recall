@@ -17,31 +17,30 @@
         </div>
         <div id="lobby_info">
             <ul id="lobby_members_list">
-                
+
             </ul>
 
         </div>
         <div id="guesses">
-            <div class="country_guess_list_wrapper" id="default_list">
-                <input type="text" class="invisible_input" value="Unorganized">
-                <hr>
-                <ul>
-                    
-                </ul>
+            <div id="list_flex_container">
+                <div id="main_player_list_wrapper" class="country_list_wrapper" style="display: none;">
+                    <h2>Countries you recall</h2>
+                    <hr>
+                    <div id="main_player_list" class="country_list">
+    
+                    </div>
+                </div>
             </div>
-
-            <button>Add a list</button>
         </div>
         <div id="input">
             <div id="pre_game">
-                <h1>Global Recall</h1>
+                <h1>Ready?</h1>
                 <input type="checkbox" onclick="toggle_ready(this.checked)">
             </div>
             <div id="main_game" style="display: none;">
                 <input type="text" id="country_guess_input" placeholder="Let's get to typing">
                 <button onclick="make_guess()" style="margin: 2em; width: 6em;">Submit</button>
             </div>
-
         </div>
 
     </div>

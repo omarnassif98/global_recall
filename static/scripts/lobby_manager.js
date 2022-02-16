@@ -1,3 +1,8 @@
+function lobby_context(game_state){
+    if(game_state == 'main_game')
+        update_status_text('Game in progress. Please wait');
+}
+
 function add_player(uuid, player_info){
     console.log('creating_player');
     let player_listing = document.createElement('li');
@@ -19,7 +24,6 @@ function player_hot_release(data){
 }
 
 function player_ready_toggle(data){
-    console.log(data);
     var [uuid, state] = data.split('_');
     state = (state == 'true');
     let player_listing = document.getElementById(uuid);
