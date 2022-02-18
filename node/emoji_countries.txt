@@ -13,7 +13,7 @@
 🇦🇹|Austria|12
 🇦🇺|Australia|13
 🇦🇼|Aruba|14
-🇦🇽|Åland Islands|15
+🇦🇽|Aland Islands|15
 🇦🇿|Azerbaijan|16
 🇧🇦|Bosnia & Herzegovina|17
 🇧🇧|Barbados|18
@@ -37,12 +37,12 @@
 🇧🇾|Belarus|36
 🇧🇿|Belize|37
 🇨🇦|Canada|38
-🇨🇨|Cocos (Keeling) Islands|39
-🇨🇩|Congo — Kinshasa|40
+🇨🇨|CocosIslands|39
+🇨🇩|Democratic People's Republic of Congo|40
 🇨🇫|Central African Republic|41
-🇨🇬|Congo — Brazzaville|42
+🇨🇬|Republic of Congo|42
 🇨🇭|Switzerland|43
-🇨🇮|Côte d’Ivoire|44
+🇨🇮|Ivory Coast|44
 🇨🇰|Cook Islands|45
 🇨🇱|Chile|46
 🇨🇲|Cameroon|47
@@ -52,7 +52,7 @@
 🇨🇷|Costa Rica|51
 🇨🇺|Cuba|52
 🇨🇻|Cape Verde|53
-🇨🇼|Curaçao|54
+🇨🇼|Curacao|54
 🇨🇽|Christmas Island|55
 🇨🇾|Cyprus|56
 🇨🇿|Czechia|57
@@ -186,12 +186,12 @@
 🇵🇲|St. Pierre & Miquelon|185
 🇵🇳|Pitcairn Islands|186
 🇵🇷|Puerto Rico|187
-🇵🇸|Palestinian Territories|188
+🇵🇸|Palestine|188
 🇵🇹|Portugal|189
 🇵🇼|Palau|190
 🇵🇾|Paraguay|191
 🇶🇦|Qatar|192
-🇷🇪|Réunion|193
+🇷🇪|Reunion|193
 🇷🇴|Romania|194
 🇷🇸|Serbia|195
 🇷🇺|Russia|196
@@ -212,7 +212,7 @@
 🇸🇴|Somalia|211
 🇸🇷|Suriname|212
 🇸🇸|South Sudan|213
-🇸🇹|São Tomé & Príncipe|214
+🇸🇹|Sao Tome & Príncipe|214
 🇸🇻|El Salvador|215
 🇸🇽|Sint Maarten|216
 🇸🇾|Syria|217
@@ -230,7 +230,7 @@
 🇹🇳|Tunisia|229
 🇹🇴|Tonga|230
 🇹🇷|Turkey|231
-🇹🇹|Trinidad & Tobago|232
+🇹🇹|Trinidad and Tobago|232
 🇹🇻|Tuvalu|233
 🇹🇼|Taiwan|234
 🇹🇿|Tanzania|235
@@ -259,25 +259,3 @@
 🏴󠁧󠁢󠁥󠁮󠁧󠁿|England|258
 🏴󠁧󠁢󠁳󠁣󠁴󠁿|Scotland|259
 🏴󠁧󠁢󠁷󠁬󠁳󠁿|Wales|260
- Flag: United Nations
-🇺🇸 Flag: United States
-🇺🇾 Flag: Uruguay
-🇺🇿 Flag: Uzbekistan
-🇻🇦 Flag: Vatican City
-🇻🇨 Flag: St. Vincent & Grenadines
-🇻🇪 Flag: Venezuela
-🇻🇬 Flag: British Virgin Islands
-🇻🇮 Flag: U.S. Virgin Islands
-🇻🇳 Flag: Vietnam
-🇻🇺 Flag: Vanuatu
-🇼🇫 Flag: Wallis & Futuna
-🇼🇸 Flag: Samoa
-🇽🇰 Flag: Kosovo
-🇾🇪 Flag: Yemen
-🇾🇹 Flag: Mayotte
-🇿🇦 Flag: South Africa
-🇿🇲 Flag: Zambia
-🇿🇼 Flag: Zimbabwe
-🏴󠁧󠁢󠁥󠁮󠁧󠁿 Flag: England
-🏴󠁧󠁢󠁳󠁣󠁴󠁿 Flag: Scotland
-🏴󠁧󠁢󠁷󠁬󠁳󠁿 Flag: Wales

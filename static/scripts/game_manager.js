@@ -1,4 +1,5 @@
 var player_answer_list = [];
+
 function render_player_list(player_uuid, data, occurances, answers){
     player_ready_toggle(`${player_uuid}_false`);
     console.log('render');
@@ -18,8 +19,6 @@ function render_player_list(player_uuid, data, occurances, answers){
         if(occurances[country_code] == 1){
             unique_score += 1;
             country_listing.style.color = 'green';
-        }else{
-            country_listing.style.color = 'red';
         }
         player_country_list.append(country_listing);
     });
@@ -29,6 +28,7 @@ function render_player_list(player_uuid, data, occurances, answers){
     overall_score_prompt.innerHTML = `Score: ${Object.keys(data).length}`;
     let unique_score_prompt = document.createElement('span');
     unique_score_prompt.innerHTML = `${unique_score} of those being unique!`;
+    unique_score_prompt.style.color = 'green';
     player_list_wrapper.append(overall_score_prompt);
     player_list_wrapper.append(unique_score_prompt);
     document.getElementById('list_flex_container').append(player_list_wrapper);
@@ -53,6 +53,7 @@ function game_state_change(data){
     update_input_area(game_begun);
     player_data = JSON.parse(player_data);
     if(game_begun){
+        document.getElementById('readiness_checkbox').checked = false;
         clear_player_lists();
         set_temporary_status_text('Game has Begun', false);
         player_data.forEach(uuid => {
@@ -60,12 +61,12 @@ function game_state_change(data){
         });
         var countdown_timer = 300;
         game_timer = setInterval(() => {
+            countdown_timer -= 1;
             if(!temporary_showing)
                 update_status_text(`${Math.floor(countdown_timer/60)}:${("0" + countdown_timer%60).slice(-2)}`)
-            countdown_timer -= 1;
-            if(countdown_timer%60==0){
-                set_temporary_status_text(`${Math.floor(countdown_timer/60)} minutes left!`, false);
-            }
+                if(countdown_timer%60==0){
+                    set_temporary_status_text(`${Math.floor(countdown_timer/60)} minutes left!`, false);
+                }
         },1000)
     }else{
         console.log(player_data);
@@ -91,6 +92,8 @@ function game_state_change(data){
 }
 
 function make_guess(){
+    console.log('guessing!');
+    console.trace();
     let guess_value = document.getElementById('country_guess_input').value;
     if(guess_value.length == 0)
         return;
@@ -98,17 +101,20 @@ function make_guess(){
 }
 
 
-window.addEventListener('load', () => {
-    change_focus(document.getElementById('default_list'))
-})
 
 function guess_result(result){
+    console.log(result);
     let payload = JSON.parse(result);
     if(payload){
         console.log(payload);
         let country_listing = document.createElement('span');
         country_listing.innerHTML = `${payload.flag} ${payload.country}`;
         document.getElementById('main_player_list').append(country_listing);
+        document.getElementById('country_guess_input').style.backgroundColor = 'yellowgreen';
+        document.getElementById("country_guess_input").value = '';
+    }else{
+        console.log('ITS FAILING');
+        document.getElementById('country_guess_input').style.backgroundColor = 'salmon';
     }
 }
 

@@ -15,7 +15,7 @@ function connect_to_server(){
     let player_name = document.getElementById('player_name_input').value;
     if(player_name.length == 0)
         return
-    socket = new WebSocket(`ws://${location.hostname}/ws`);
+    socket = new WebSocket(`${(location.protocol == 'https:')?'wss:':'ws:'}//${location.hostname}/ws`);
     // Connection opened
     
     function heartbeat(){
@@ -30,9 +30,9 @@ function connect_to_server(){
         heartbeat();
         send_message('join', player_name);
         dismiss_popup();
-        update_status_text('Welcome to the game');
-        document.addEventListener('country_guess', (e) => send_message('guess', e.detail.val));
-        document.addEventListener('pregame_ready', (e) => send_message('ready', e.detail.val));
+        update_status_text('Welcome to Global Recall');
+        document.addEventListener('country_guess', (e) => {send_message('guess', e.detail.val)});
+        document.addEventListener('pregame_ready', (e) => {send_message('ready', e.detail.val)});
     });
 
 
@@ -44,6 +44,7 @@ function connect_to_server(){
     });
 
     function send_message(protocol, message){
+        console.log(`sending ${protocol}_${message}`);
         socket.send(`${protocol}|${message}`)
     }
 

@@ -1,7 +1,18 @@
 const {guess_country, peek_answers} = require('./game');
 const WebSocket = require('ws');
 const UUID = require('uuid');
-const profile_colors = ['#008080', '#ffa500', '#ff00ff', '#00ff00', '#ff0000', '#0000ff', '#A52A2A', '#7FFFD4', '#FF69B4', '#FF4500', '#98FB98', '#9ACD32', '#EE82EE']
+const profile_colors = [
+    "#ff0000",
+    "#8F7200",
+    "#000000",
+    "#0050a4",
+    "#ef4138",
+    "#7f055f",
+    "#357266",
+    "#BB2A25",
+    "#255c99",
+    "#7c7c7c"
+];
 const protocol_lookup = {
     'join':user_join,
     'ready':user_toggle_ready,
@@ -68,7 +79,7 @@ function user_toggle_ready(client, state){
 function readiness_consensus(){
     if(game_state.state == 'main_game')
         return;
-
+    console.log('consensus check');
     if(Object.keys(game_state.player_data).length/Object.keys(lobby_info).length > 0.65 && !game_state.countdown){
         console.log('readiness consensus achieved. starting game in 5 seconds');
         broadcast_to_all_users('consensus|true');
@@ -78,7 +89,7 @@ function readiness_consensus(){
             broadcast_to_all_users(`game_state|start_${JSON.stringify(Object.keys(game_state.player_data))}`);
             setTimeout(() => {
                 end_game();
-            }, 15000);
+            }, 300000);
         }, 5000);
     }else if(Object.keys(game_state.player_data).length/Object.keys(lobby_info).length <= 0.65 && game_state.countdown){
         console.log('readiness consensus broken. cancelling countdown');
@@ -95,9 +106,11 @@ function end_game(){
     broadcast_to_all_users(`game_state|end_${JSON.stringify(snapshot)}`);
     game_state.player_data = {};
     game_state.state = 'pre_game';
+    game_state.countdown = null;
 }
 
 function user_guess(client, country){
+    console.log(`${client} guesses ${country}`);
     let result = guess_country(country);
     console.log(result);
     if(result == false || game_state.player_data[client.id].includes(result.code)){
