@@ -1,8 +1,9 @@
 🇦🇨|Ascension Island|0
 🇦🇩|Andorra|1
 🇦🇪|United Arab Emirates|2
+🇦🇪|UAE|2
 🇦🇫|Afghanistan|3
-🇦🇬|Antigua & Barbuda|4
+🇦🇬|Antigua and Barbuda|4
 🇦🇮|Anguilla|5
 🇦🇱|Albania|6
 🇦🇲|Armenia|7
@@ -14,8 +15,9 @@
 🇦🇺|Australia|13
 🇦🇼|Aruba|14
 🇦🇽|Aland Islands|15
+🇦🇽|Aland|15
 🇦🇿|Azerbaijan|16
-🇧🇦|Bosnia & Herzegovina|17
+🇧🇦|Bosnia and Herzegovina|17
 🇧🇧|Barbados|18
 🇧🇩|Bangladesh|19
 🇧🇪|Belgium|20
@@ -24,7 +26,7 @@
 🇧🇭|Bahrain|23
 🇧🇮|Burundi|24
 🇧🇯|Benin|25
-🇧🇱|St. Barthélemy|26
+🇧🇱|St Barthélemy|26
 🇧🇲|Bermuda|27
 🇧🇳|Brunei|28
 🇧🇴|Bolivia|29
@@ -33,12 +35,14 @@
 🇧🇸|Bahamas|32
 🇧🇹|Bhutan|33
 🇧🇻|Bouvet Island|34
+🇧🇻|Bouvet|34
 🇧🇼|Botswana|35
 🇧🇾|Belarus|36
 🇧🇿|Belize|37
 🇨🇦|Canada|38
-🇨🇨|CocosIslands|39
+🇨🇨|Cocos Islands|39
 🇨🇩|Democratic People's Republic of Congo|40
+🇨🇩|DPRC|40
 🇨🇫|Central African Republic|41
 🇨🇬|Republic of Congo|42
 🇨🇭|Switzerland|43
@@ -63,7 +67,7 @@
 🇩🇲|Dominica|62
 🇩🇴|Dominican Republic|63
 🇩🇿|Algeria|64
-🇪🇦|Ceuta & Melilla|65
+🇪🇦|Ceuta and Melilla|65
 🇪🇨|Ecuador|66
 🇪🇪|Estonia|67
 🇪🇬|Egypt|68
@@ -72,6 +76,7 @@
 🇪🇸|Spain|71
 🇪🇹|Ethiopia|72
 🇪🇺|European Union|73
+🇪🇺|EU|73
 🇫🇮|Finland|74
 🇫🇯|Fiji|75
 🇫🇰|Falkland Islands|76
@@ -80,6 +85,7 @@
 🇫🇷|France|79
 🇬🇦|Gabon|80
 🇬🇧|United Kingdom|81
+🇬🇧|UK|81
 🇬🇩|Grenada|82
 🇬🇪|Georgia|83
 🇬🇫|French Guiana|84
@@ -87,18 +93,19 @@
 🇬🇭|Ghana|86
 🇬🇮|Gibraltar|87
 🇬🇱|Greenland|88
+🇬🇲|The Gambia|89
 🇬🇲|Gambia|89
 🇬🇳|Guinea|90
 🇬🇵|Guadeloupe|91
 🇬🇶|Equatorial Guinea|92
 🇬🇷|Greece|93
-🇬🇸|South Georgia & South Sandwich Islands|94
+🇬🇸|South Georgia and South Sandwich Islands|94
 🇬🇹|Guatemala|95
 🇬🇺|Guam|96
-🇬🇼|Guinea-Bissau|97
+🇬🇼|Guinea Bissau|97
 🇬🇾|Guyana|98
-🇭🇰|Hong Kong SAR China|99
-🇭🇲|Heard & McDonald Islands|100
+🇭🇰|Hong Kong|99
+🇭🇲|Heard and McDonald Islands|100
 🇭🇳|Honduras|101
 🇭🇷|Croatia|102
 🇭🇹|Haiti|103
@@ -123,15 +130,18 @@
 🇰🇭|Cambodia|122
 🇰🇮|Kiribati|123
 🇰🇲|Comoros|124
-🇰🇳|St. Kitts & Nevis|125
+🇰🇳|St Kitts and Nevis|125
+🇰🇵|Democratic People's Republic of Korea|126
 🇰🇵|North Korea|126
+🇰🇵|DPRK|126
+🇰🇷|Republic of Korea|127
 🇰🇷|South Korea|127
 🇰🇼|Kuwait|128
 🇰🇾|Cayman Islands|129
 🇰🇿|Kazakhstan|130
 🇱🇦|Laos|131
 🇱🇧|Lebanon|132
-🇱🇨|St. Lucia|133
+🇱🇨|St Lucia|133
 🇱🇮|Liechtenstein|134
 🇱🇰|Sri Lanka|135
 🇱🇷|Liberia|136
@@ -144,10 +154,11 @@
 🇲🇨|Monaco|143
 🇲🇩|Moldova|144
 🇲🇪|Montenegro|145
-🇲🇫|St. Martin|146
+🇲🇫|St Martin|146
 🇲🇬|Madagascar|147
 🇲🇭|Marshall Islands|148
 🇲🇰|North Macedonia|149
+🇲🇰|Macedonia|149
 🇲🇱|Mali|150
 🇲🇲|Myanmar|151
 🇲🇳|Mongolia|152
@@ -183,7 +194,7 @@
 🇵🇭|Philippines|182
 🇵🇰|Pakistan|183
 🇵🇱|Poland|184
-🇵🇲|St. Pierre & Miquelon|185
+🇵🇲|St Pierre and Miquelon|185
 🇵🇳|Pitcairn Islands|186
 🇵🇷|Puerto Rico|187
 🇵🇸|Palestine|188
@@ -202,9 +213,10 @@
 🇸🇩|Sudan|201
 🇸🇪|Sweden|202
 🇸🇬|Singapore|203
-🇸🇭|St. Helena|204
+🇸🇭|St Helena|204
 🇸🇮|Slovenia|205
-🇸🇯|Svalbard & Jan Mayen|206
+🇸🇯|Svalbard and Jan Mayen|206
+🇸🇯|Svalbard|206
 🇸🇰|Slovakia|207
 🇸🇱|Sierra Leone|208
 🇸🇲|San Marino|209
@@ -212,20 +224,20 @@
 🇸🇴|Somalia|211
 🇸🇷|Suriname|212
 🇸🇸|South Sudan|213
-🇸🇹|Sao Tome & Príncipe|214
+🇸🇹|Sao Tome and Príncipe|214
 🇸🇻|El Salvador|215
 🇸🇽|Sint Maarten|216
 🇸🇾|Syria|217
 🇸🇿|Swaziland|218
 🇹🇦|Tristan Da Cunha|219
-🇹🇨|Turks & Caicos Islands|220
+🇹🇨|Turks and Caicos Islands|220
 🇹🇩|Chad|221
 🇹🇫|French Southern Territories|222
 🇹🇬|Togo|223
 🇹🇭|Thailand|224
 🇹🇯|Tajikistan|225
 🇹🇰|Tokelau|226
-🇹🇱|Timor-Leste|227
+🇹🇱|Timor Leste|227
 🇹🇲|Turkmenistan|228
 🇹🇳|Tunisia|229
 🇹🇴|Tonga|230
@@ -236,19 +248,23 @@
 🇹🇿|Tanzania|235
 🇺🇦|Ukraine|236
 🇺🇬|Uganda|237
-🇺🇲|U.S. Outlying Islands|238
+🇺🇲|US Outlying Islands|238
 🇺🇳|United Nations|239
+🇺🇳|UN|239
 🇺🇸|United States|240
+🇺🇸|USA|240
 🇺🇾|Uruguay|241
 🇺🇿|Uzbekistan|242
 🇻🇦|Vatican City|243
-🇻🇨|St. Vincent & Grenadines|244
+🇻🇦|Vatican|243
+🇻🇦|Holy See|243
+🇻🇨|St Vincent and Grenadines|244
 🇻🇪|Venezuela|245
 🇻🇬|British Virgin Islands|246
-🇻🇮|U.S. Virgin Islands|247
+🇻🇮|US Virgin Islands|247
 🇻🇳|Vietnam|248
 🇻🇺|Vanuatu|249
-🇼🇫|Wallis & Futuna|250
+🇼🇫|Wallis and Futuna|250
 🇼🇸|Samoa|251
 🇽🇰|Kosovo|252
 🇾🇪|Yemen|253
@@ -259,3 +275,12 @@
 🏴󠁧󠁢󠁥󠁮󠁧󠁿|England|258
 🏴󠁧󠁢󠁳󠁣󠁴󠁿|Scotland|259
 🏴󠁧󠁢󠁷󠁬󠁳󠁿|Wales|260
+🏳️‍⚧️|Transgender Flag|261
+🏳️‍⚧️|Transgender|261
+🏳️‍⚧️|Trans|261
+🏳️‍🌈|Rainbow Flag|262
+🏳️‍🌈|LGBT|262
+🏳️‍🌈|LGBTQ|262
+🏳️‍🌈|LGBTQ+|262
+🏴‍☠️|Pirate Flag|263
+🏴‍☠️|Pirate|263

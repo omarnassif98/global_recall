@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="style/game.css">
     <script src="/scripts/helper.js"></script>
     <script src="/scripts/room_manager.js"></script>
@@ -33,9 +34,21 @@
             </div>
         </div>
         <div id="input">
-            <div id="pre_game" style="margin: auto;">
-                <h1 style="display: inline;">Ready?</h1>
-                <input type="checkbox" id="readiness_checkbox" onclick="toggle_ready(this.checked)">
+            <div id="pre_game">
+                <div id="unready">
+                    <span style="font-size: 1.5em;">When you're ready</span>
+                    <div id="time_limit_vote">
+                        <span class="selected_timelimit" id="default_timelimit" onclick="select_timelimit(this, 5)">5 minutes</span>
+                        <span onclick="select_timelimit(this, 10)">10 minutes</span>
+                        <span onclick="select_timelimit(this, 30)">30 minutes</span>
+                    </div>
+                    <button id="ready_up" onclick="toggle_ready(true)"">Ready Up</button>
+                </div>
+
+                <div id="ready" style="display: none;">
+                    <span style="font-size: 1.5em; display: block;">You're all set</span>
+                    <button onclick="toggle_ready(false)"">Wait no... I'm not ready</button>
+                </div>
             </div>
             <div id="main_game" style="display: none; margin: auto;">
                 <input type="text" id="country_guess_input" placeholder="Let's get to typing">

@@ -1,6 +1,8 @@
 function lobby_context(game_state){
-    if(game_state == 'main_game')
+    if(game_state == 'main_game'){
         update_status_text('Game in progress. Please wait');
+        document.getElementById('ready_up').disabled = true;
+    }
 }
 
 function add_player(uuid, player_info){
@@ -49,5 +51,15 @@ function update_input_area(state){
     }else{
         document.getElementById('pre_game').style.display = 'block';
         document.getElementById('main_game').style.display = 'none';
+    }
+}
+
+function update_pregame_readiness_state(state){
+    if(state){
+        document.getElementById('unready').style.display = 'none';
+        document.getElementById('ready').style.display = 'block';
+    }else{
+        document.getElementById('ready').style.display = 'none';
+        document.getElementById('unready').style.display = 'block';
     }
 }

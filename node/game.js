@@ -1,23 +1,33 @@
 const fs = require('fs')
-const country_codes = {};
+const country_lookup = {};
+const country_info = {};
+
 fs.readFileSync('./emoji_countries.txt').toString().split('\n').forEach(raw_values => {
-    [flag, country, code] = raw_values.split('|');
-    console.log('Country: ' + country);
-    console.log(country.toLowerCase().replace(/&/g, 'and').replace(/[.']/g, '').replace(/[-]/g, ' '));
-    country_codes[country.toLowerCase().replace(/&/g, 'and').replace(/[.']/g, '').replace(/[-]/g, ' ')] = {code:code, flag:flag, country:country};
+    let [flag, country, code] = raw_values.split('|');
+    country_cleaned = country.toLowerCase();
+    if(!(code in country_info)){
+        country_info[code] = {name:country, flag:flag}
+    }
+    country_lookup[country_cleaned] = code;
 })
 
 function guess_country(country){
-    country = country.toLowerCase().replace(/saint/g, 'st').replace(/&/g, 'and').replace(/[.']/g, '').replace(/[-]/g, ' ').replace(/dpr/, 'democratic peoples republic of');
-    console.log(country);
-    if(country in country_codes){
-        return country_codes[country];
-    }else{
+    try{
+        return country_lookup[country];
+    }catch{
         return false;
     }
 }
 
-function peek_answers(){
-    return Object.values(country_codes);
+function get_country_info(code){
+    try{
+        return country_info[code]
+    }catch{
+
+    }
 }
-module.exports = {guess_country, peek_answers};
+
+function peek_answers(){
+    return country_info;
+}
+module.exports = {guess_country, peek_answers, get_country_info};

@@ -19,6 +19,14 @@ function set_temporary_status_text(temporary_text, resolve_to_title=true){
     }, 1500);
 }
 
+var selected_timelimit_button;
+function select_timelimit(new_selection, time_in_minutes){
+    selected_timelimit_button.classList.remove('selected_timelimit');
+    new_selection.classList.add('selected_timelimit');
+    selected_timelimit_button = new_selection;
+    document.dispatchEvent(new CustomEvent('set_timelimit', {'detail':{'val':time_in_minutes*60000}}));
+}
+
 var preparer;
 function prepare_game(consensus){
     var countdown_timer = 4;
@@ -37,6 +45,7 @@ function prepare_game(consensus){
 }
 
 window.addEventListener('load', () => {
+    selected_timelimit_button = document.getElementById('default_timelimit');
     document.getElementById("country_guess_input").addEventListener('keyup', e => {
         e.preventDefault();
         if(e.key == 'Enter'){

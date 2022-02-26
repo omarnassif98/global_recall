@@ -33,6 +33,8 @@ function connect_to_server(){
         update_status_text('Welcome to Global Recall');
         document.addEventListener('country_guess', (e) => {send_message('guess', e.detail.val)});
         document.addEventListener('pregame_ready', (e) => {send_message('ready', e.detail.val)});
+        document.addEventListener('set_timelimit', (e) => {send_message('timelimit_vote', e.detail.val)});
+        
     });
 
 

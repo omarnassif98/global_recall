@@ -1,6 +1,3 @@
-upstream http_server{
-        server localhost:5000;
-}
 upstream websocket_server{
         server localhost:5001;
 }
@@ -27,12 +24,8 @@ server {
         ssl_certificate /etc/nginx/ssl/live/recall.omarnassif.me/fullchain.pem;
         ssl_certificate_key /etc/nginx/ssl/live/recall.omarnassif.me/privkey.pem;
 
-        location /room {
+        location / {
                 index index.html;
-        }
-
-        location /api/ {
-                proxy_pass http://http_server/;
         }
 
         location /ws {

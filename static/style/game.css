@@ -11,6 +11,26 @@ html, body{
     background-color: darkgray;
 }
 
+#pre_game{
+    margin: auto;
+    text-align: center;
+}
+
+#time_limit_vote{
+    margin: 1em;
+}
+
+#time_limit_vote span{
+    padding: 0.5em;
+    background-color: darkgray;
+    font-size: 1em;
+    cursor: default;
+}
+
+.selected_timelimit{
+    background-color: gray !important;
+}
+
 #backdrop{
     display: flex;
     flex-direction: column;
@@ -27,7 +47,7 @@ html, body{
     width: 100%;
     height: 100%;
     display: grid;
-    grid-template-rows: [nav] 4em [row_main] auto [input] 6em;
+    grid-template-rows: [nav] 4em [row_main] auto [input] 7em;
     grid-template-columns: [sidebar] 12em [col_main] auto;
 }
 
