@@ -49,7 +49,6 @@ window.addEventListener('load', () => {
     document.getElementById("country_guess_input").addEventListener('keyup', e => {
         e.preventDefault();
         if(e.key == 'Enter'){
-            console.log('is this just happening twice?');
             document.getElementById('submit_guess').click();
         }
     })

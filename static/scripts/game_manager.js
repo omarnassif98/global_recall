@@ -1,10 +1,8 @@
+console.log('%c Sorry, no cheats here! ', 'font-size:3em; background: #222; color: cornflowerblue');
 var player_answer_list = [];
 var player_ready = false;
 function render_player_list(player_uuid, data, occurances, answers){
-    console.log(answers);
     player_ready_toggle(`${player_uuid}_false`);
-    console.log('render');
-    console.log(data);
     var unique_score = 0;
     let player_list_wrapper = document.createElement('div');
     player_list_wrapper.classList.add('country_list_wrapper');
@@ -37,7 +35,6 @@ function render_player_list(player_uuid, data, occurances, answers){
 }
 
 function render_answers(occurances, answers){
-    console.log('render answers');
     var unique_score = 0;
     let player_list_wrapper = document.createElement('div');
     player_list_wrapper.classList.add('country_list_wrapper');
@@ -77,7 +74,6 @@ function clear_player_lists(){
 
 var game_timer;
 function game_state_change(data){
-    console.log(data);
     let [state, player_data, time_limit] = data.split('_');
     game_begun = (state=='start');
     player_data = JSON.parse(player_data);
@@ -102,11 +98,9 @@ function game_state_change(data){
                 }
         },1000)
     }else if(!game_begun){
-        console.log('Game done');
         toggle_ready(false);
         update_pregame_readiness_state(false);
         document.getElementById('ready_up').disabled = false;
-        console.log(player_data);
         clearInterval(game_timer);
         set_temporary_status_text('Game has ended');
         occurances = {};
@@ -119,7 +113,6 @@ function game_state_change(data){
                 }
             })
         })
-        console.log(occurances);
         Object.entries(player_data.guesses).forEach(([uuid, data]) => {
             render_player_list(uuid, data, occurances, player_data.answers);
         })
@@ -134,17 +127,14 @@ function game_state_change(data){
 
 function make_guess(){
     let guess_value = document.getElementById('country_guess_input').value.toLowerCase().replace(/&/g, 'and').replace(/[.']+|^[ \t]+|[ \t]+$/g, '').replace(/[-]/g, ' ');
-    console.log(guess_value);
     if(guess_value.length == 0)
         return;
         document.dispatchEvent(new CustomEvent('country_guess', {'detail':{'val':guess_value}}));
 }
 
 function guess_result(result){
-    console.log(result);
     let payload = JSON.parse(result);
     if(payload){
-        console.log(payload);
         let country_listing = document.createElement('span');
         country_listing.innerHTML = `${payload.flag} ${payload.name}`;
         document.getElementById('main_player_list').append(country_listing);

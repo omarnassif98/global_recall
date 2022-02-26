@@ -19,7 +19,6 @@ function connect_to_server(){
     // Connection opened
     
     function heartbeat(){
-        console.log('Hearbeat');
         if(!socket)
             return;
         socket.send('heartbeat');
@@ -41,12 +40,10 @@ function connect_to_server(){
     // Listen for messages
     socket.addEventListener('message',({ data }) => {
         let [protocol, payload] = data.split('|');
-        console.log(`got ${protocol} message`)
         protocol_lookup[protocol](payload);
     });
 
     function send_message(protocol, message){
-        console.log(`sending ${protocol}_${message}`);
         socket.send(`${protocol}|${message}`)
     }
 

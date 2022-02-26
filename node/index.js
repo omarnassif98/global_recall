@@ -30,7 +30,6 @@ wss.on('connection', (ws, req) => {
     ws.id = UUID.v4();
     socket_info.set(ws.id, ws);
     game_state.time_limit_votes[ws.id] = 300000;
-    console.log(5000);
     ws.on('message', (message) =>{
         try{
             let split_message = message.toString().split('|');
@@ -60,7 +59,6 @@ function get_elected_time_limit(){
     let vote_occurances = {}
     //Only the users who are ready
     for(uid in game_state.player_data){
-        console.log(uid);
         try {
             vote_occurances[game_state.time_limit_votes[uid]] += 1
         } catch (error) {
@@ -94,7 +92,6 @@ function readiness_consensus(){
         return;
     if(Object.keys(game_state.player_data).length/Object.keys(lobby_info).length > 0.65 && !game_state.countdown){
         let game_time_limit = get_elected_time_limit();
-        console.log(`${game_time_limit/60} second limit`);
         broadcast_to_all_users('consensus|true');
         game_state.countdown = setTimeout(() => {
             game_state.state = 'main_game';
@@ -112,7 +109,6 @@ function readiness_consensus(){
 
 function user_toggle_ready(client, state){
     if(game_state.state != 'pre_game'){
-        console.log(`Cannot change ready ${game_state.state}`);
         return;
     }
     //state is a truthy value
@@ -138,7 +134,6 @@ function end_game(){
 function user_guess(client, country){
     console.log(`${client} guesses ${country}`);
     let result = guess_country(country);
-    console.log(result);
     if(result == false || game_state.player_data[client.id].includes(result)){
         client.send(`guess_result|false`);
         return;

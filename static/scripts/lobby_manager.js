@@ -6,7 +6,6 @@ function lobby_context(game_state){
 }
 
 function add_player(uuid, player_info){
-    console.log('creating_player');
     let player_listing = document.createElement('li');
     player_listing.id = uuid;
     player_listing.setAttribute('name', player_info.name);
@@ -16,7 +15,6 @@ function add_player(uuid, player_info){
 }
 
 function player_hot_join(data){
-    console.log('PLAYER COMING IN HOT');
     let [uuid, raw_json] = data.split('_');
     add_player(uuid, JSON.parse(raw_json));
 }
@@ -33,7 +31,6 @@ function player_ready_toggle(data){
 }
 
 function fill_lobby(existing_players){
-    console.log('Catching lobby up to speed');
     for([uuid, player_info] of Object.entries(JSON.parse(existing_players))){
         add_player(uuid, player_info)
     }
