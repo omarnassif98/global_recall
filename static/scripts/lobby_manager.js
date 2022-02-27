@@ -1,8 +1,8 @@
 function lobby_context(game_state){
     if(game_state == 'main_game'){
         update_status_text('Game in progress. Please wait');
-        document.getElementById('ready_up').disabled = true;
     }
+    document.getElementById('ready_up').disabled = (game_state == 'main_game');
 }
 
 function add_player(uuid, player_info){

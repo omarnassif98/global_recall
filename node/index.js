@@ -43,11 +43,19 @@ wss.on('connection', (ws, req) => {
         }
     })
     ws.on('close', () =>{
+	console.log(`goodbye, ${lobby_info[ws.id].name}`)
         socket_info.delete(ws.id);
         if(ws.id in lobby_info){
             delete lobby_info[ws.id];
             delete game_state.time_limit_votes[ws.id];
         }
+	try{
+	    delete game_state.player_data[ws.id];
+	    if(Object.keys(game_state.player_data).length == 0)
+		end_game();
+	}catch{
+	    console.log('player was not even in game');
+	}
 
         broadcast_to_all_users(`player_leave|${ws.id}`);
         readiness_consensus();
@@ -94,6 +102,7 @@ function readiness_consensus(){
         let game_time_limit = get_elected_time_limit();
         broadcast_to_all_users('consensus|true');
         game_state.countdown = setTimeout(() => {
+	    console.log(`${game_time_limit/60000} minute game has begun`);
             game_state.state = 'main_game';
             broadcast_to_all_users(`game_state|start_${JSON.stringify(Object.keys(game_state.player_data))}_${game_time_limit}`);
             setTimeout(() => {
@@ -122,6 +131,7 @@ function user_toggle_ready(client, state){
 }
 
 function end_game(){
+    console.log('game has ended')
     let snapshot = {}
     snapshot.guesses = game_state.player_data;
     snapshot.answers = peek_answers();
@@ -132,10 +142,9 @@ function end_game(){
 }
 
 function user_guess(client, country){
-    console.log(`${client} guesses ${country}`);
     let result = guess_country(country);
-    if(result == false || game_state.player_data[client.id].includes(result)){
-        client.send(`guess_result|false`);
+    if(!result || game_state.player_data[client.id].includes(result)){
+	client.send(`guess_result|false`);
         return;
     }
     client.send(`guess_result|${JSON.stringify(get_country_info(result))}`);

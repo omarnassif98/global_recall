@@ -23,7 +23,6 @@ function get_country_info(code){
     try{
         return country_info[code]
     }catch{
-
     }
 }
 

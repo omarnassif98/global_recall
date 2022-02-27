@@ -278,9 +278,9 @@
 🏳️‍⚧️|Transgender Flag|261
 🏳️‍⚧️|Transgender|261
 🏳️‍⚧️|Trans|261
-🏳️‍🌈|Rainbow Flag|262
+🏳️‍🌈|Pride flag|262
+🏳️‍🌈|Rainbow Flag|260
 🏳️‍🌈|LGBT|262
-🏳️‍🌈|LGBTQ|262
 🏳️‍🌈|LGBTQ+|262
 🏴‍☠️|Pirate Flag|263
 🏴‍☠️|Pirate|263
