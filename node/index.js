@@ -1,4 +1,5 @@
 const {guess_country, peek_answers, get_country_info} = require('./game');
+const {record_game} = require('./analytics')
 const WebSocket = require('ws');
 const UUID = require('uuid');
 const profile_colors = [
@@ -22,14 +23,11 @@ const protocol_lookup = {
 const wss = new WebSocket.Server({port : 5001});
 let socket_info = new Map();
 let lobby_info = {}
-var game_state  = {state:'pre_game', countdown:null, player_data:{}, time_limit_votes:{}};
+var game_state  = {state:'pre_game', countdown:null, player_data:{}, time_limit_votes:{}, current_timelimit:null};
 
 
 wss.on('connection', (ws, req) => {
     ws.send(`lobby_intro|${JSON.stringify(lobby_info)}`)
-    ws.id = UUID.v4();
-    socket_info.set(ws.id, ws);
-    game_state.time_limit_votes[ws.id] = 300000;
     ws.on('message', (message) =>{
         try{
             let split_message = message.toString().split('|');
@@ -52,7 +50,7 @@ wss.on('connection', (ws, req) => {
 	try{
 	    delete game_state.player_data[ws.id];
 	    if(Object.keys(game_state.player_data).length == 0)
-		end_game();
+		end_game(true);
 	}catch{
 	    console.log('player was not even in game');
 	}
@@ -79,7 +77,15 @@ function get_elected_time_limit(){
     
 }
 
-function user_join(client, name){
+function user_join(client, client_info){
+    let [name, id] = client_info.split('_');
+
+    client.id = (id)?id:UUID.v4();
+    if(!id)
+        client.send(`user_register|${client.id}`)
+    socket_info.set(client.id, client);
+    game_state.time_limit_votes[client.id] = 300000;
+
     lobby_info[client.id] = {
         name:name,
         color:profile_colors[Math.floor(Math.random() * profile_colors.length)],
@@ -99,15 +105,15 @@ function readiness_consensus(){
     if(game_state.state == 'main_game')
         return;
     if(Object.keys(game_state.player_data).length/Object.keys(lobby_info).length > 0.65 && !game_state.countdown){
-        let game_time_limit = get_elected_time_limit();
+        game_state.current_timelimit = get_elected_time_limit();
         broadcast_to_all_users('consensus|true');
         game_state.countdown = setTimeout(() => {
-	    console.log(`${game_time_limit/60000} minute game has begun`);
+	    console.log(`${game_state.current_timelimit/60000} minute game has begun`);
             game_state.state = 'main_game';
-            broadcast_to_all_users(`game_state|start_${JSON.stringify(Object.keys(game_state.player_data))}_${game_time_limit}`);
+            broadcast_to_all_users(`game_state|start_${JSON.stringify(Object.keys(game_state.player_data))}_${game_state.current_timelimit}`);
             setTimeout(() => {
                 end_game();
-            }, game_time_limit);
+            }, game_state.current_timelimit);
         }, 5000);
     }else if(Object.keys(game_state.player_data).length/Object.keys(lobby_info).length <= 0.65 && game_state.countdown){
         clearTimeout(game_state.countdown);
@@ -130,12 +136,14 @@ function user_toggle_ready(client, state){
     readiness_consensus();
 }
 
-function end_game(){
+function end_game(aborted = false){
     console.log('game has ended')
     let snapshot = {}
     snapshot.guesses = game_state.player_data;
     snapshot.answers = peek_answers();
     broadcast_to_all_users(`game_state|end_${JSON.stringify(snapshot)}`);
+    if(!aborted)
+        record_game({player_data:game_state.player_data, time_limit:game_state.current_timelimit});
     game_state.player_data = {};
     game_state.state = 'pre_game';
     game_state.countdown = null;

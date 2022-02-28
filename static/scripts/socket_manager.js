@@ -8,8 +8,13 @@ const protocol_lookup = {
     'consensus':prepare_game,
     'game_state': game_state_change,
     'guess_result': guess_result,
-    'player_score':update_player_score
+    'player_score':update_player_score,
+    'user_register':set_credentials
 };
+
+function set_credentials(uid){
+    localStorage.setItem('uid', uid);
+}
 
 function connect_to_server(){
     let player_name = document.getElementById('player_name_input').value;
@@ -27,7 +32,12 @@ function connect_to_server(){
 
     socket.addEventListener('open', () => {
         heartbeat();
-        send_message('join', player_name);
+        if(localStorage.getItem('uid')){
+            send_message('join', `${player_name}_${localStorage.getItem('uid')}`);
+        }else{
+            send_message('join', player_name);
+        }
+
         dismiss_popup();
         update_status_text('Welcome to Global Recall');
         document.addEventListener('country_guess', (e) => {send_message('guess', e.detail.val)});
@@ -46,6 +56,7 @@ function connect_to_server(){
     function send_message(protocol, message){
         socket.send(`${protocol}|${message}`)
     }
-
-
+    
+    
+    
 }
