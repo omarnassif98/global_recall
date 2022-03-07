@@ -1,5 +1,5 @@
 const {guess_country, peek_answers, get_country_info} = require('./game');
-const {record_game} = require('./analytics')
+const {record_game, register_user} = require('./analytics')
 const WebSocket = require('ws');
 const UUID = require('uuid');
 const profile_colors = [
@@ -85,7 +85,7 @@ function user_join(client, client_info){
         client.send(`user_register|${client.id}`)
     socket_info.set(client.id, client);
     game_state.time_limit_votes[client.id] = 300000;
-
+    register_user(client.id, name);
     lobby_info[client.id] = {
         name:name,
         color:profile_colors[Math.floor(Math.random() * profile_colors.length)],
